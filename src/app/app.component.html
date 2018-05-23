@@ -1,12 +1,16 @@
 <div style="text-align:center">
+
   <app-aston></app-aston>
   <h1>
     Welcome to {{ title }} {{ name }}!
     <!-- Entre les deux {}, c'est une expression  qui renvoie une chaine de caractères; le name en plus a été défini dans app.component.ts-->
   </h1>
+  <input type="text" [(ngModel)]="email"> {{ email }}
   <h2>
     {{ sayHello() }}
     <!-- On fait appel à la fonction définie dans app.component.ts -->
   </h2>
-  <input type="text" [(ngModel)]="email"> {{ email }}
+  <message-aston></message-aston>
+  <hr/>
+  <app-data></app-data>
 </div>
