@@ -1,6 +1,9 @@
 <div style="text-align:center">
 
   <app-aston></app-aston>
+  <hr/>
+  <message-aston (response)="getText($event)"Blabla="Hello World" limit="20"></message-aston> <!-- getText fonction de App qui sert à récupèrer le message envoyé par le sendMessage du message  -->
+  <message-aston Blabla="Hello Toto" limit="10"></message-aston>
   <h1>
     Welcome to {{ title }} {{ name }}!
     <!-- Entre les deux {}, c'est une expression  qui renvoie une chaine de caractères; le name en plus a été défini dans app.component.ts-->

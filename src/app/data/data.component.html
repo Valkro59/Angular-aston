@@ -9,10 +9,10 @@
 
 
   </form>
-
+<!-- On utilise une directive structurelle avec * plus ici ngFor, il va y avoir une modification de la strucure-->
   <ul>
-    <li *ngFor="let task of tasks" [ngClass]="{'task-done': task.done}">{{ task.title }}</li>
-    <!-- On utilise une directive structurelle avec * plus ici ngFor, il va y avoir une modification de la strucure-->
+    <li (click)="task.done = !task.done" *ngFor="let task of tasks" [ngClass]="{'task-done': task.done}">
+        {{ task.title }}
+    </li>
   </ul>
-
 </div>

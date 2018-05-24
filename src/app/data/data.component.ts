@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class DataComponent {
   name: string = '';
   task = { text: '' };
+  
 
   tasks = [ // entre [] c'est un tableau auquel on accroche une collection d'objets Task
     { title: 'Task 1', done: false },
@@ -16,11 +17,13 @@ export class DataComponent {
     { title: 'Task 3', done: false }
   ]
 
-  assTask() {
+  addTask() {
     console.log(this.task);
     this.tasks.push({
-    title: this.task.text,
-    done: false});
+      title: this.task.text,
+      done: false
+    });
+    this.task.text = "";
   }
 
 
